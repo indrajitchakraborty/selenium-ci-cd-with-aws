@@ -49,7 +49,6 @@ services:
       - selenium-hub
       - chrome
       - firefox
-      - edge
       - chrome-for-testing
     environment:
       - TEST_SUITE=${TEST_SUITE}
