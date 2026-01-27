@@ -12,8 +12,8 @@ public class DriverFactory {
 
     private static final ThreadLocal<WebDriver> tdriver = new ThreadLocal<>();
 
-    @BeforeMethod
-    public void setupBrowser(){
+    @BeforeMethod(alwaysRun = true)
+    public static void setupBrowser(){
 
         try {
             String browser = System.getProperty("browser", "chrome");
