@@ -43,13 +43,25 @@ services:
       - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
 
   tests:
-    build: .
-    container_name: selenium-tests-ci-cd
-    depends_on:
-      - selenium-hub
-      - chrome
-      - firefox
-      - chrome-for-testing
-    environment:
-      - TEST_SUITE=${TEST_SUITE}
-      - BROWSER=${BROWSER}
+      image: selenium-tests:latest
+      container_name: selenium-tests-ci-cd
+      depends_on:
+        - selenium-hub
+        - chrome
+        - firefox
+        - chrome-for-testing
+      environment:
+        - TEST_SUITE=${TEST_SUITE}
+        - BROWSER=${BROWSER}
+
+#  tests:
+#    build: .
+#    container_name: selenium-tests-ci-cd
+#    depends_on:
+#      - selenium-hub
+#      - chrome
+#      - firefox
+#      - chrome-for-testing
+#    environment:
+#      - TEST_SUITE=${TEST_SUITE}
+#      - BROWSER=${BROWSER}
