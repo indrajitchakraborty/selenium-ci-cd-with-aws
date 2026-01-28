@@ -1,0 +1,11 @@
+version: 0.2
+
+phases:
+  build:
+    commands:
+      - docker build -t selenium-tests .
+      - docker save selenium-tests > image.tar
+
+artifacts:
+  files:
+    - image.tar

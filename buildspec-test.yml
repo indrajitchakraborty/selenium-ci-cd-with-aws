@@ -1,0 +1,14 @@
+version: 0.2
+
+phases:
+  pre_build:
+    commands:
+      - docker load < image.tar
+
+  build:
+    commands:
+      - docker-compose up --abort-on-container-exit
+
+  post_build:
+    commands:
+      - docker-compose down
