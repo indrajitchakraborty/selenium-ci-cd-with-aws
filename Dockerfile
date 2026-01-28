@@ -1,4 +1,5 @@
-FROM maven:3.9.6-eclipse-temurin-17
+#FROM maven:3.9.6-eclipse-temurin-17
+FROM public.ecr.aws/docker/library/maven:3.9.6-eclipse-temurin-17
 WORKDIR /tests
 COPY . .
 #RUN mvn clean test-compile
