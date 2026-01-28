@@ -9,4 +9,4 @@ phases:
 artifacts:
   files:
     - image.tar
-    - buildspec-test.yml
+    - docker-compose.yml
