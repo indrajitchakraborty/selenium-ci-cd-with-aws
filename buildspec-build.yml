@@ -10,3 +10,4 @@ artifacts:
   files:
     - image.tar
     - docker-compose.yml
+    - buildspec-test.yml
